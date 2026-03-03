@@ -50,7 +50,7 @@ export function AppSidebar() {
           {!collapsed &&
           <div className="animate-slide-in-right">
               <h2 className="font-bold text-sidebar-accent-foreground tracking-tight text-xl text-sky-300 bg-transparent">
-
+                Gestão Conecta
             </h2>
               <p className="text-xs text-sidebar-foreground/60">
                 Gestão simplificada
