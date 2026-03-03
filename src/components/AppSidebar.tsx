@@ -7,8 +7,8 @@ import {
   Receipt,
   LogOut,
   ChevronLeft,
-  ChevronRight,
-  Briefcase } from
+  ChevronRight, ChartNoAxesCombined } from
+
 "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -45,7 +45,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
-            <Briefcase className="h-5 w-5 text-sidebar-primary-foreground" />
+            <ChartNoAxesCombined className="text-sidebar-primary-foreground h-[40px] w-[40px]" />
           </div>
           {!collapsed &&
           <div className="animate-slide-in-right">
