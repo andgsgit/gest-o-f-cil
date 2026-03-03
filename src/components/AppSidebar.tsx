@@ -1,15 +1,15 @@
-import { 
-  LayoutDashboard, 
-  ArrowUpDown, 
-  Users, 
-  BarChart3, 
-  Settings, 
+import {
+  LayoutDashboard,
+  ArrowUpDown,
+  Users,
+  BarChart3,
+  Settings,
   Receipt,
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Briefcase
-} from "lucide-react";
+  Briefcase } from
+"lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -23,17 +23,17 @@ import {
   SidebarMenuItem,
   SidebarFooter,
   SidebarHeader,
-  useSidebar,
-} from "@/components/ui/sidebar";
+  useSidebar } from
+"@/components/ui/sidebar";
 
 const menuItems = [
-  { title: "Painel", url: "/", icon: LayoutDashboard },
-  { title: "Transações", url: "/transacoes", icon: ArrowUpDown },
-  { title: "Clientes", url: "/clientes", icon: Users },
-  { title: "Produtos", url: "/produtos", icon: Receipt },
-  { title: "Relatórios", url: "/relatorios", icon: BarChart3 },
-  { title: "Configurações", url: "/configuracoes", icon: Settings },
-];
+{ title: "Painel", url: "/", icon: LayoutDashboard },
+{ title: "Transações", url: "/transacoes", icon: ArrowUpDown },
+{ title: "Clientes", url: "/clientes", icon: Users },
+{ title: "Produtos", url: "/produtos", icon: Receipt },
+{ title: "Relatórios", url: "/relatorios", icon: BarChart3 },
+{ title: "Configurações", url: "/configuracoes", icon: Settings }];
+
 
 export function AppSidebar() {
   const { state, toggleSidebar } = useSidebar();
@@ -47,16 +47,16 @@ export function AppSidebar() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
             <Briefcase className="h-5 w-5 text-sidebar-primary-foreground" />
           </div>
-          {!collapsed && (
-            <div className="animate-slide-in-right">
-              <h2 className="text-sm font-bold text-sidebar-accent-foreground tracking-tight">
-                FinançasMEI
-              </h2>
+          {!collapsed &&
+          <div className="animate-slide-in-right">
+              <h2 className="font-bold text-sidebar-accent-foreground tracking-tight text-xl text-sky-300 bg-transparent">
+
+            </h2>
               <p className="text-xs text-sidebar-foreground/60">
                 Gestão simplificada
               </p>
             </div>
-          )}
+          }
         </div>
       </SidebarHeader>
 
@@ -67,21 +67,21 @@ export function AppSidebar() {
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
+              {menuItems.map((item) =>
+              <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild tooltip={item.title}>
                     <NavLink
-                      to={item.url}
-                      end={item.url === "/"}
-                      className="hover:bg-sidebar-accent/60 transition-colors"
-                      activeClassName="bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-                    >
+                    to={item.url}
+                    end={item.url === "/"}
+                    className="hover:bg-sidebar-accent/60 transition-colors"
+                    activeClassName="bg-sidebar-accent text-sidebar-accent-foreground font-medium">
+                    
                       <item.icon className="h-4 w-4" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              ))}
+              )}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -90,11 +90,11 @@ export function AppSidebar() {
       <SidebarFooter className="p-2">
         <button
           onClick={toggleSidebar}
-          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 transition-colors"
-        >
+          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 transition-colors">
+          
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </button>
       </SidebarFooter>
-    </Sidebar>
-  );
+    </Sidebar>);
+
 }
