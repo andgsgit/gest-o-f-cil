@@ -307,7 +307,7 @@ const SidebarHeader = React.forwardRef<HTMLDivElement, React.ComponentProps<"div
 SidebarHeader.displayName = "SidebarHeader";
 
 const SidebarFooter = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(({ className, ...props }, ref) => {
-  return <div ref={ref} data-sidebar="footer" className={cn("flex flex-col gap-2 p-2 bg-zinc-600", className)} {...props} />;
+  return <div ref={ref} data-sidebar="footer" className={cn("flex flex-col gap-2 p-2", className)} {...props} />;
 });
 SidebarFooter.displayName = "SidebarFooter";
 
@@ -330,7 +330,7 @@ const SidebarContent = React.forwardRef<HTMLDivElement, React.ComponentProps<"di
     <div
       ref={ref}
       data-sidebar="content"
-      className={cn("flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden text-current bg-[#595754]",
+      className={cn("flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden text-current",
 
       className
       )}
@@ -407,7 +407,7 @@ const SidebarMenu = React.forwardRef<HTMLUListElement, React.ComponentProps<"ul"
 SidebarMenu.displayName = "SidebarMenu";
 
 const SidebarMenuItem = React.forwardRef<HTMLLIElement, React.ComponentProps<"li">>(({ className, ...props }, ref) =>
-<li ref={ref} data-sidebar="menu-item" className={cn("group/menu-item relative bg-accent-foreground", className)} {...props} />
+<li ref={ref} data-sidebar="menu-item" className={cn("group/menu-item relative", className)} {...props} />
 );
 SidebarMenuItem.displayName = "SidebarMenuItem";
 

@@ -7,8 +7,8 @@ import {
   Receipt,
   LogOut,
   ChevronLeft,
-  ChevronRight, ChartNoAxesCombined } from
-
+  ChevronRight,
+  Briefcase } from
 "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -45,7 +45,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-3">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary">
-            <ChartNoAxesCombined className="text-sidebar-primary-foreground h-[40px] w-[40px]" />
+            <Briefcase className="h-5 w-5 text-sidebar-primary-foreground" />
           </div>
           {!collapsed &&
           <div className="animate-slide-in-right">
@@ -77,7 +77,7 @@ export function AppSidebar() {
                     activeClassName="bg-sidebar-accent text-sidebar-accent-foreground font-medium">
                     
                       <item.icon className="h-4 w-4" />
-                      {!collapsed && <span className="bg-transparent text-primary-foreground">{item.title}</span>}
+                      {!collapsed && <span>{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -90,7 +90,7 @@ export function AppSidebar() {
       <SidebarFooter className="p-2">
         <button
           onClick={toggleSidebar}
-          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground transition-colors bg-primary">
+          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 transition-colors">
           
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </button>
