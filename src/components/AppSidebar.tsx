@@ -77,7 +77,7 @@ export function AppSidebar() {
                     activeClassName="bg-sidebar-accent text-sidebar-accent-foreground font-medium">
                     
                       <item.icon className="h-4 w-4" />
-                      {!collapsed && <span>{item.title}</span>}
+                      {!collapsed && <span className="bg-transparent text-primary-foreground">{item.title}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -90,7 +90,7 @@ export function AppSidebar() {
       <SidebarFooter className="p-2">
         <button
           onClick={toggleSidebar}
-          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 transition-colors">
+          className="flex w-full items-center justify-center rounded-md p-2 text-sidebar-foreground/50 hover:text-sidebar-foreground transition-colors bg-primary">
           
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </button>
