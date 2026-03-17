@@ -5,11 +5,16 @@ import {
   BarChart3,
   Settings,
   Receipt,
-  LogOut,
   ChevronLeft,
   ChevronRight,
-  Briefcase } from
-"lucide-react";
+  Briefcase,
+  Wallet,
+  Package,
+  ShoppingCart,
+  Tag,
+  Truck,
+  ShoppingBag,
+} from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
