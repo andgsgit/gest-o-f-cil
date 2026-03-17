@@ -5,11 +5,16 @@ import {
   BarChart3,
   Settings,
   Receipt,
-  LogOut,
   ChevronLeft,
   ChevronRight,
-  Briefcase } from
-"lucide-react";
+  Briefcase,
+  Wallet,
+  Package,
+  ShoppingCart,
+  Tag,
+  Truck,
+  ShoppingBag,
+} from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -27,12 +32,19 @@ import {
 "@/components/ui/sidebar";
 
 const menuItems = [
-{ title: "Painel", url: "/", icon: LayoutDashboard },
-{ title: "Transações", url: "/transacoes", icon: ArrowUpDown },
-{ title: "Clientes", url: "/clientes", icon: Users },
-{ title: "Produtos", url: "/produtos", icon: Receipt },
-{ title: "Relatórios", url: "/relatorios", icon: BarChart3 },
-{ title: "Configurações", url: "/configuracoes", icon: Settings }];
+  { title: "Painel", url: "/", icon: LayoutDashboard },
+  { title: "Vendas", url: "/vendas", icon: ShoppingBag },
+  { title: "Compras", url: "/compras", icon: ShoppingCart },
+  { title: "Caixa", url: "/caixa", icon: Wallet },
+  { title: "Produtos", url: "/produtos", icon: Receipt },
+  { title: "Estoque", url: "/estoque", icon: Package },
+  { title: "Clientes", url: "/clientes", icon: Users },
+  { title: "Fornecedores", url: "/fornecedores", icon: Truck },
+  { title: "Categorias", url: "/categorias", icon: Tag },
+  { title: "Relatórios", url: "/relatorios", icon: BarChart3 },
+  { title: "Transações", url: "/transacoes", icon: ArrowUpDown },
+  { title: "Configurações", url: "/configuracoes", icon: Settings },
+];
 
 
 export function AppSidebar() {
