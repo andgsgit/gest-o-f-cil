@@ -9,6 +9,12 @@ import Clientes from "./pages/Clientes";
 import Produtos from "./pages/Produtos";
 import Relatorios from "./pages/Relatorios";
 import Configuracoes from "./pages/Configuracoes";
+import Caixa from "./pages/Caixa";
+import Estoque from "./pages/Estoque";
+import Compras from "./pages/Compras";
+import Categorias from "./pages/Categorias";
+import Fornecedores from "./pages/Fornecedores";
+import Vendas from "./pages/Vendas";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
