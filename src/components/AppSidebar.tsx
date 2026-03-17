@@ -1,6 +1,6 @@
 import {
   LayoutDashboard,
-  ArrowUpDown,
+  
   Users,
   BarChart3,
   Settings,
@@ -42,7 +42,7 @@ const menuItems = [
   { title: "Fornecedores", url: "/fornecedores", icon: Truck },
   { title: "Categorias", url: "/categorias", icon: Tag },
   { title: "Relatórios", url: "/relatorios", icon: BarChart3 },
-  { title: "Transações", url: "/transacoes", icon: ArrowUpDown },
+  
   { title: "Configurações", url: "/configuracoes", icon: Settings },
 ];
 
